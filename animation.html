@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>animatioon</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.min.js"></script>
+
+    <style>
+        .color-changing-animation {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            animation-name: change-color;
+            animation-duration: 4s;
+        }
+
+        .multiple-changing-animation {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: peru;
+            animation-name: multiple-color;
+            animation-duration: 1s;
+        }
+
+        @keyframes change-color {
+            from {
+                background-color: brown;
+            }
+
+            to {
+                background-color: green;
+            }
+        }
+
+        @keyframes multiple-color {
+            0% {
+                background-color: brown;
+                left: 0px;
+                top: 0px
+            }
+
+            25% {
+                background-color: blue;
+                left: 200px;
+                top: 0px
+            }
+
+            50% {
+                background-color: aquamarine;
+                left: 200px;
+                top: 200px
+            }
+
+            75% {
+                background-color: pink;
+                left: 200px;
+                top: 100px
+            }
+
+            100% {
+                background-color: aqua;
+                left: 100px;
+                top: 0px
+            }
+        }
+
+
+        .logo {
+
+            color: red;
+            animation-name: bounce;
+            animation-duration: 0.5s;
+            animation-iteration-count: 0.5s;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+
+        }
+
+        .new-collection {
+            text-align: center;
+            font-size: 30px;
+            position: realtive;
+
+        }
+
+        .new-collection::before {
+            content: "";
+            width: 4px;
+            height: 40px;
+            background-color: red;
+            position: absolute;
+            transform: translateX(-15px);
+            animation-name: new-collection;
+            animation-duration: 2s;
+        }
+
+
+        @keyframes new-collection {
+            0% {
+                background-color: brown;
+            }
+
+            25% {
+                background-color: blue;
+            }
+
+            50% {
+                background-color: aquamarine;
+            }
+
+            75% {
+                background-color: pink;
+            }
+
+            100% {
+                background-color: aqua;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1> color changing animation</h1>
+    <div class="color-changing-animation"></div>
+    <br>
+    <div class="multiple-changing-animation"></div>
+
+    <h1 class="logo">Attire</h1>
+
+    <div class="new-collection">New collection</div>
+
+
+</body>
+
+</html>
